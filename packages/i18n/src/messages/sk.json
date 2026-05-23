@@ -1,0 +1,84 @@
+{
+  "app": {
+    "name": "Pestuj",
+    "tagline": "Tvoj vreckový záhradník pre strednú Európu"
+  },
+  "nav": {
+    "home": "Domov",
+    "catalog": "Katalóg rastlín",
+    "garden": "Moja záhrada",
+    "diagnosis": "Diagnostika",
+    "subscription": "Predplatné",
+    "signIn": "Prihlásiť sa",
+    "signOut": "Odhlásiť",
+    "signUp": "Registrácia"
+  },
+  "landing": {
+    "heroTitle": "Odfoť rastlinu, dostaneš radu.",
+    "heroSubtitle": "Personálny záhradník vo vrecku — pre Slovensko, Česko aj celú strednú Európu.",
+    "ctaPrimary": "Začať pestovať",
+    "ctaSecondary": "Pozrieť katalóg"
+  },
+  "auth": {
+    "signInTitle": "Vitaj späť",
+    "signUpTitle": "Vytvor si účet",
+    "email": "E-mail",
+    "password": "Heslo",
+    "continueWithGoogle": "Pokračovať s Googlom",
+    "continueWithApple": "Pokračovať s Apple",
+    "sendMagicLink": "Poslať prihlasovací odkaz",
+    "magicLinkSent": "Odkaz sme poslali na e-mail",
+    "or": "alebo"
+  },
+  "onboarding": {
+    "step1Title": "Akým jazykom hovoríš?",
+    "step2Title": "Odkiaľ si?",
+    "step3Title": "Kde pestuješ?",
+    "step4Title": "Vyber svoj klimatický región",
+    "useMyLocation": "Použiť moju polohu",
+    "selectManually": "Vybrať ručne",
+    "continue": "Pokračovať",
+    "back": "Späť",
+    "finish": "Hotovo"
+  },
+  "pricing": {
+    "title": "Vyber si predplatné",
+    "subtitle": "Bez reklám, bez sledovania. Iba výsledky.",
+    "monthly": "Mesačne",
+    "yearly": "Ročne",
+    "family": "Rodinný plán",
+    "perMonth": "/mesiac",
+    "perYear": "/rok",
+    "save": "Ušetríš {amount} Kč",
+    "selectPlan": "Vybrať",
+    "currentPlan": "Aktuálny plán",
+    "moneyBack": "14-dňová záruka vrátenia peňazí",
+    "familyFeature": "Až 3 účty",
+    "diagnosesPerMonth": "{count} diagnóz mesačne",
+    "unlimitedPlants": "Neobmedzene rastlín",
+    "pushNotifications": "Push notifikácie"
+  },
+  "garden": {
+    "title": "Moja záhrada",
+    "empty": "Zatiaľ tu nič nerastie",
+    "addPlant": "Pridať rastlinu",
+    "tasksToday": "Dnešné úlohy",
+    "noTasks": "Žiadne úlohy na dnes"
+  },
+  "diagnosis": {
+    "title": "Diagnostika rastliny",
+    "uploadCta": "Nahrať fotku",
+    "analyzing": "Analyzujem…",
+    "quotaExceeded": "Vyčerpal si mesačný limit diagnóz",
+    "urgencyLow": "Žiadny zhon",
+    "urgencyMedium": "Sleduj situáciu",
+    "urgencyHigh": "Vyžaduje pozornosť",
+    "urgencyCritical": "Okamžitý zásah"
+  },
+  "errors": {
+    "generic": "Niečo sa pokazilo. Skús to prosím znova.",
+    "network": "Problém s pripojením",
+    "unauthorized": "Pre túto akciu sa musíš prihlásiť",
+    "paymentRequired": "Pre túto funkciu potrebuješ aktívne predplatné"
+  }
+}

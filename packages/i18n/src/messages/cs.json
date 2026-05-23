@@ -1,0 +1,84 @@
+{
+  "app": {
+    "name": "Pestuj",
+    "tagline": "Tvůj kapesní zahradník pro střední Evropu"
+  },
+  "nav": {
+    "home": "Domů",
+    "catalog": "Katalog rostlin",
+    "garden": "Moje zahrada",
+    "diagnosis": "Diagnostika",
+    "subscription": "Předplatné",
+    "signIn": "Přihlásit se",
+    "signOut": "Odhlásit",
+    "signUp": "Registrace"
+  },
+  "landing": {
+    "heroTitle": "Vyfoť rostlinu, dostaň radu.",
+    "heroSubtitle": "Personální zahradník v kapse — pro Česko, Slovensko i celou střední Evropu.",
+    "ctaPrimary": "Začít pěstovat",
+    "ctaSecondary": "Prohlédnout katalog"
+  },
+  "auth": {
+    "signInTitle": "Vítej zpět",
+    "signUpTitle": "Vytvoř si účet",
+    "email": "E-mail",
+    "password": "Heslo",
+    "continueWithGoogle": "Pokračovat s Googlem",
+    "continueWithApple": "Pokračovat s Apple",
+    "sendMagicLink": "Poslat přihlašovací odkaz",
+    "magicLinkSent": "Odkaz jsme poslali na e-mail",
+    "or": "nebo"
+  },
+  "onboarding": {
+    "step1Title": "Jakým jazykem mluvíš?",
+    "step2Title": "Odkud jsi?",
+    "step3Title": "Kde pěstuješ?",
+    "step4Title": "Vyber svůj klimatický region",
+    "useMyLocation": "Použít moji polohu",
+    "selectManually": "Vybrat ručně",
+    "continue": "Pokračovat",
+    "back": "Zpět",
+    "finish": "Hotovo"
+  },
+  "pricing": {
+    "title": "Vyber si předplatné",
+    "subtitle": "Bez reklam, bez sledování. Jen výsledky.",
+    "monthly": "Měsíčně",
+    "yearly": "Ročně",
+    "family": "Rodinný plán",
+    "perMonth": "/měsíc",
+    "perYear": "/rok",
+    "save": "Ušetříš {amount} Kč",
+    "selectPlan": "Vybrat",
+    "currentPlan": "Aktuální plán",
+    "moneyBack": "14denní záruka vrácení peněz",
+    "familyFeature": "Až 3 účty",
+    "diagnosesPerMonth": "{count} diagnóz měsíčně",
+    "unlimitedPlants": "Neomezeně rostlin",
+    "pushNotifications": "Push notifikace"
+  },
+  "garden": {
+    "title": "Moje zahrada",
+    "empty": "Zatím tu nic neroste",
+    "addPlant": "Přidat rostlinu",
+    "tasksToday": "Dnešní úkoly",
+    "noTasks": "Žádné úkoly na dnešek"
+  },
+  "diagnosis": {
+    "title": "Diagnostika rostliny",
+    "uploadCta": "Nahrát fotku",
+    "analyzing": "Analyzuji…",
+    "quotaExceeded": "Vyčerpal jsi měsíční limit diagnóz",
+    "urgencyLow": "Žádný spěch",
+    "urgencyMedium": "Sleduj situaci",
+    "urgencyHigh": "Vyžaduje pozornost",
+    "urgencyCritical": "Okamžitý zásah"
+  },
+  "errors": {
+    "generic": "Něco se pokazilo. Zkus to prosím znovu.",
+    "network": "Problém s připojením",
+    "unauthorized": "Pro tuto akci se musíš přihlásit",
+    "paymentRequired": "Pro tuto funkci potřebuješ aktivní předplatné"
+  }
+}

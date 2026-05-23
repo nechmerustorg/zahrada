@@ -1,0 +1,84 @@
+{
+  "app": {
+    "name": "Pestuj",
+    "tagline": "Your pocket gardener for Central Europe"
+  },
+  "nav": {
+    "home": "Home",
+    "catalog": "Plant catalog",
+    "garden": "My garden",
+    "diagnosis": "Diagnosis",
+    "subscription": "Subscription",
+    "signIn": "Sign in",
+    "signOut": "Sign out",
+    "signUp": "Sign up"
+  },
+  "landing": {
+    "heroTitle": "Snap a plant, get expert advice.",
+    "heroSubtitle": "A pocket gardener tailored to Central European climate.",
+    "ctaPrimary": "Start growing",
+    "ctaSecondary": "Browse catalog"
+  },
+  "auth": {
+    "signInTitle": "Welcome back",
+    "signUpTitle": "Create your account",
+    "email": "Email",
+    "password": "Password",
+    "continueWithGoogle": "Continue with Google",
+    "continueWithApple": "Continue with Apple",
+    "sendMagicLink": "Send sign-in link",
+    "magicLinkSent": "Check your email for the link",
+    "or": "or"
+  },
+  "onboarding": {
+    "step1Title": "What language do you speak?",
+    "step2Title": "Where are you from?",
+    "step3Title": "Where do you grow?",
+    "step4Title": "Choose your climate region",
+    "useMyLocation": "Use my location",
+    "selectManually": "Choose manually",
+    "continue": "Continue",
+    "back": "Back",
+    "finish": "Done"
+  },
+  "pricing": {
+    "title": "Choose your plan",
+    "subtitle": "No ads, no tracking. Just results.",
+    "monthly": "Monthly",
+    "yearly": "Yearly",
+    "family": "Family plan",
+    "perMonth": "/month",
+    "perYear": "/year",
+    "save": "Save {amount} CZK",
+    "selectPlan": "Choose",
+    "currentPlan": "Current plan",
+    "moneyBack": "14-day money-back guarantee",
+    "familyFeature": "Up to 3 accounts",
+    "diagnosesPerMonth": "{count} diagnoses per month",
+    "unlimitedPlants": "Unlimited plants",
+    "pushNotifications": "Push notifications"
+  },
+  "garden": {
+    "title": "My garden",
+    "empty": "Nothing growing yet",
+    "addPlant": "Add plant",
+    "tasksToday": "Today's tasks",
+    "noTasks": "No tasks for today"
+  },
+  "diagnosis": {
+    "title": "Plant diagnosis",
+    "uploadCta": "Upload a photo",
+    "analyzing": "Analysing…",
+    "quotaExceeded": "You've used up this month's diagnosis quota",
+    "urgencyLow": "No rush",
+    "urgencyMedium": "Keep an eye on it",
+    "urgencyHigh": "Needs attention",
+    "urgencyCritical": "Immediate action"
+  },
+  "errors": {
+    "generic": "Something went wrong. Please try again.",
+    "network": "Connection problem",
+    "unauthorized": "Please sign in to do that",
+    "paymentRequired": "This feature requires an active subscription"
+  }
+}

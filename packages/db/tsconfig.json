@@ -1,0 +1,10 @@
+{
+  "extends": "@pestuj/config/tsconfig.library.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "rootDir": ".",
+    "noEmit": true,
+    "composite": false
+  },
+  "include": ["src/**/*", "drizzle.config.ts"]
+}
