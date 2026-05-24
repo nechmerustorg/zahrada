@@ -3,27 +3,36 @@ import { getTranslations } from 'next-intl/server';
 import { CLIMATE_REGION_LABELS } from '@pestuj/shared';
 import { Link } from '@/i18n/navigation';
 import { getUserSession, isOnboardingComplete } from '@/lib/auth/session';
-import { listUserPlants, pickCommonName } from '@/lib/garden/queries';
-import { formatPlantedSince } from '@/lib/garden/format';
-import { TaskList } from '@/components/garden/task-list';
+import { listUserPlants } from '@/lib/garden/queries';
 import { createSupabaseServerClient } from '@/lib/supabase/server';
 import { generateTasksForAllUserPlants } from '@/lib/garden/task-engine';
+import { listUserTasks } from '@/lib/garden/tasks';
+import { TaskList } from '@/components/garden/task-list';
+import { GardenList } from '@/components/garden/garden-list';
+import { GardenMap } from '@/components/garden/garden-map';
+import { GardenViewToggle } from '@/components/garden/view-toggle';
 
-export default async function GardenPage() {
+export default async function GardenPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ view?: string }>;
+}) {
   const session = await getUserSession();
   if (!session) redirect('/sign-in');
   if (!isOnboardingComplete(session.profile)) redirect('/onboarding');
+
+  const sp = await searchParams;
+  const view: 'list' | 'map' = sp.view === 'map' ? 'map' : 'list';
 
   const t = await getTranslations('garden');
   const tTasks = await getTranslations('tasks');
   const locale = session.profile.locale;
   const regionLabel =
-    session.profile.climateZone &&
-    CLIMATE_REGION_LABELS[session.profile.climateZone][locale];
+    session.profile.climateZone && CLIMATE_REGION_LABELS[session.profile.climateZone][locale];
 
   const plants = await listUserPlants(session.userId);
 
-  // Best-effort: lazily seed tasks for users whose plants pre-date the engine.
+  // Lazy backfill: if the user has plants but no pending tasks, seed them now.
   if (plants.length > 0) {
     const supabase = await createSupabaseServerClient();
     const { count } = await supabase
@@ -35,6 +44,8 @@ export default async function GardenPage() {
       await generateTasksForAllUserPlants(supabase, session.userId).catch(() => {});
     }
   }
+
+  const tasks = plants.length > 0 ? await listUserTasks({ userId: session.userId, windowEndDays: 14 }) : [];
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-leaf-50 to-white">
@@ -60,9 +71,7 @@ export default async function GardenPage() {
               </p>
             )}
             {regionLabel && (
-              <p className="text-sm text-leaf-600">
-                {t('regionLine', { region: regionLabel })}
-              </p>
+              <p className="text-sm text-leaf-600">{t('regionLine', { region: regionLabel })}</p>
             )}
           </div>
           {plants.length > 0 && (
@@ -100,50 +109,17 @@ export default async function GardenPage() {
             </Link>
           </div>
         ) : (
-          <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {plants.map((plant) => {
-              const headline = plant.nickname || plant.custom_name;
-              const scientific = plant.plants_catalog?.scientific_name ?? null;
-              const sinceLabel = formatPlantedSince(plant.planted_at, locale);
-              const commonCatalogName = plant.plants_catalog
-                ? pickCommonName(
-                    plant.plants_catalog.common_names,
-                    locale,
-                    plant.plants_catalog.scientific_name,
-                  )
-                : null;
-              return (
-                <li key={plant.id}>
-                  <Link
-                    href={`/moje-zahrada/${plant.id}`}
-                    className="flex h-full flex-col rounded-3xl border border-leaf-200 bg-white p-5 shadow-sm transition hover:border-leaf-400 hover:shadow-md"
-                  >
-                    <div className="flex items-start justify-between gap-3">
-                      <h2 className="text-xl font-semibold text-leaf-900">{headline}</h2>
-                      {plant.quantity > 1 && (
-                        <span className="shrink-0 rounded-full bg-leaf-100 px-2.5 py-1 text-xs font-medium text-leaf-800">
-                          {t('quantityShort', { count: plant.quantity })}
-                        </span>
-                      )}
-                    </div>
-                    {plant.nickname && plant.custom_name !== plant.nickname && (
-                      <p className="mt-0.5 text-sm text-leaf-700">{plant.custom_name}</p>
-                    )}
-                    {scientific && (
-                      <p className="mt-1 text-sm italic text-leaf-600">{scientific}</p>
-                    )}
-                    {commonCatalogName && commonCatalogName !== plant.custom_name && (
-                      <p className="mt-0.5 text-xs text-leaf-500">{commonCatalogName}</p>
-                    )}
-                    <div className="mt-auto pt-4 text-sm text-leaf-700">
-                      {plant.location_label && <p>{plant.location_label}</p>}
-                      {sinceLabel && <p className="text-leaf-600">{sinceLabel}</p>}
-                    </div>
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
+          <div className="mt-12">
+            <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
+              <h2 className="text-xl font-semibold text-leaf-900">{t('plantsHeading')}</h2>
+              <GardenViewToggle current={view} />
+            </div>
+            {view === 'map' ? (
+              <GardenMap plants={plants} tasks={tasks} locale={locale} />
+            ) : (
+              <GardenList plants={plants} tasks={tasks} locale={locale} />
+            )}
+          </div>
         )}
       </section>
     </main>

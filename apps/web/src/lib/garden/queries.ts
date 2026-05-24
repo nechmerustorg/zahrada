@@ -5,6 +5,7 @@ export interface CatalogJoin {
   id: string;
   slug: string;
   scientific_name: string;
+  category: string;
   common_names: Record<string, string[]> | null;
   images: Array<{ path: string; alt?: string }> | null;
 }
@@ -48,6 +49,7 @@ const PLANT_SELECT = `
     id,
     slug,
     scientific_name,
+    category,
     common_names,
     images
   )
