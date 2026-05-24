@@ -51,6 +51,7 @@
     "useMyLocation": "Use my location",
     "locationDetecting": "Detecting location…",
     "locationError": "Couldn't detect your location. Please choose manually.",
+    "detectedFromGps": "We figured out your region from your location. Pick a different one if it doesn't fit.",
     "selectManually": "Choose manually",
     "continue": "Continue",
     "back": "Back",
