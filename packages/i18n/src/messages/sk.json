@@ -133,6 +133,56 @@
     "urgencyHigh": "Vyžaduje pozornosť",
     "urgencyCritical": "Okamžitý zásah"
   },
+  "catalog": {
+    "title": "Katalóg rastlín",
+    "subtitle": "Nájdi rastlinu, ktorú pestuješ, alebo sa nechaj inšpirovať.",
+    "searchPlaceholder": "Hľadať rastlinu…",
+    "filterAll": "Všetko",
+    "filterVegetables": "Zelenina",
+    "filterHerbs": "Bylinky",
+    "filterFruits": "Ovocie",
+    "filterOrnamentals": "Okrasné",
+    "filterHouseplants": "Izbové",
+    "filterTrees": "Stromy",
+    "filterShrubs": "Kríky",
+    "resultsCount": "{count, plural, =0 {Žiadne rastliny} =1 {1 rastlina} few {{count} rastliny} other {{count} rastlín}}",
+    "noResults": "Žiadne rastliny nenájdené",
+    "viewDetail": "Zobraziť detail",
+    "addToGarden": "Pridať do mojej záhrady",
+    "backToCatalog": "← Späť na katalóg",
+    "sectionPlanting": "Sadenie a výsadba",
+    "sectionWatering": "Zalievanie",
+    "sectionFertilizing": "Hnojenie",
+    "sectionPruning": "Strihanie a údržba",
+    "sectionHarvesting": "Zber",
+    "sectionIssues": "Časté problémy",
+    "companions": "Vhodní susedia",
+    "incompatible": "Nezhodnú sa",
+    "facts": {
+      "lifecycle": "Životný cyklus",
+      "sun": "Slnko",
+      "water": "Voda",
+      "hardiness": "Mrazuvzdornosť",
+      "family": "Čeľaď",
+      "soil": "Pôda"
+    },
+    "lifecycle": {
+      "annual": "Jednoročná",
+      "biennial": "Dvojročná",
+      "perennial": "Trvalka"
+    },
+    "sun": {
+      "full_sun": "Plné slnko",
+      "partial_shade": "Polotieň",
+      "shade": "Tieň"
+    },
+    "water": {
+      "low": "Málo",
+      "medium": "Stredne",
+      "high": "Veľa"
+    },
+    "hardinessValue": "{value} °C"
+  },
   "errors": {
     "generic": "Niečo sa pokazilo. Skús to prosím znova.",
     "network": "Problém s pripojením",

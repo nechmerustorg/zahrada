@@ -133,6 +133,56 @@
     "urgencyHigh": "Needs attention",
     "urgencyCritical": "Immediate action"
   },
+  "catalog": {
+    "title": "Plant catalog",
+    "subtitle": "Find the plant you're growing or browse for inspiration.",
+    "searchPlaceholder": "Search a plant…",
+    "filterAll": "All",
+    "filterVegetables": "Vegetables",
+    "filterHerbs": "Herbs",
+    "filterFruits": "Fruits",
+    "filterOrnamentals": "Ornamentals",
+    "filterHouseplants": "Houseplants",
+    "filterTrees": "Trees",
+    "filterShrubs": "Shrubs",
+    "resultsCount": "{count, plural, =0 {No plants} =1 {1 plant} other {{count} plants}}",
+    "noResults": "No plants found",
+    "viewDetail": "View detail",
+    "addToGarden": "Add to my garden",
+    "backToCatalog": "← Back to catalog",
+    "sectionPlanting": "Planting",
+    "sectionWatering": "Watering",
+    "sectionFertilizing": "Fertilizing",
+    "sectionPruning": "Pruning",
+    "sectionHarvesting": "Harvesting",
+    "sectionIssues": "Common issues",
+    "companions": "Good companions",
+    "incompatible": "Don't pair with",
+    "facts": {
+      "lifecycle": "Lifecycle",
+      "sun": "Sun",
+      "water": "Water",
+      "hardiness": "Hardiness",
+      "family": "Family",
+      "soil": "Soil"
+    },
+    "lifecycle": {
+      "annual": "Annual",
+      "biennial": "Biennial",
+      "perennial": "Perennial"
+    },
+    "sun": {
+      "full_sun": "Full sun",
+      "partial_shade": "Partial shade",
+      "shade": "Shade"
+    },
+    "water": {
+      "low": "Low",
+      "medium": "Medium",
+      "high": "High"
+    },
+    "hardinessValue": "{value} °C"
+  },
   "errors": {
     "generic": "Something went wrong. Please try again.",
     "network": "Connection problem",
