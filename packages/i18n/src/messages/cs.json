@@ -183,6 +183,16 @@
     },
     "hardinessValue": "{value} °C"
   },
+  "tasks": {
+    "sectionTitle": "Tvoje úkoly",
+    "empty": "Žádné úkoly v dalších dvou týdnech. Užij si chvilku klidu.",
+    "todayTitle": "Dnes",
+    "upcomingTitle": "Tento týden",
+    "overdueTitle": "Po termínu ({count})",
+    "complete": "Hotovo",
+    "snoozeOneDay": "+1 den",
+    "regenerate": "Obnovit úkoly"
+  },
   "errors": {
     "generic": "Něco se pokazilo. Zkus to prosím znovu.",
     "network": "Problém s připojením",
