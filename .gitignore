@@ -63,3 +63,6 @@ supabase/.temp
 
 # drizzle
 drizzle/.snapshots
+
+# Claude Code agent worktrees
+.claude/
