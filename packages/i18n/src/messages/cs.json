@@ -121,7 +121,16 @@
     "saving": "Ukládám...",
     "deleting": "Mažu...",
     "searchHint": "Začni psát název rostliny — najdeš ji v katalogu, nebo si přidej vlastní.",
-    "clearCatalog": "Zrušit propojení s katalogem"
+    "clearCatalog": "Zrušit propojení s katalogem",
+    "plantsHeading": "Tvé rostliny",
+    "viewList": "Seznam",
+    "viewMap": "Záhon",
+    "legend": "Legenda",
+    "urgency": {
+      "tasksShort": "úkolů",
+      "dueOn": "Termín",
+      "allCalm": "Nic k řešení"
+    }
   },
   "diagnosis": {
     "title": "Diagnostika rostliny",

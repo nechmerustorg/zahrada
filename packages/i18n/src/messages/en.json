@@ -121,7 +121,16 @@
     "saving": "Saving...",
     "deleting": "Deleting...",
     "searchHint": "Start typing a plant name to find it in the catalog, or add a custom one.",
-    "clearCatalog": "Clear catalog link"
+    "clearCatalog": "Clear catalog link",
+    "plantsHeading": "Your plants",
+    "viewList": "List",
+    "viewMap": "Garden bed",
+    "legend": "Legend",
+    "urgency": {
+      "tasksShort": "tasks",
+      "dueOn": "Due",
+      "allCalm": "Nothing urgent"
+    }
   },
   "diagnosis": {
     "title": "Plant diagnosis",
