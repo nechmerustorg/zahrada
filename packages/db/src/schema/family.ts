@@ -6,7 +6,7 @@ import {
   uniqueIndex,
   index,
 } from 'drizzle-orm/pg-core';
-import { profiles } from './profiles.js';
+import { profiles } from './profiles';
 
 export const familyInvites = pgTable(
   'family_invites',

@@ -1,5 +1,5 @@
 import { pgTable, uuid, text, timestamp, uniqueIndex, index } from 'drizzle-orm/pg-core';
-import { profiles } from './profiles.js';
+import { profiles } from './profiles';
 
 export const notificationTokens = pgTable(
   'notification_tokens',

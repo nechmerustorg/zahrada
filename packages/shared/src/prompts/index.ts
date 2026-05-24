@@ -1,1 +1,1 @@
-export * from './diagnose.js';
+export * from './diagnose';

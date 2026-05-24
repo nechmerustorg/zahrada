@@ -1,4 +1,4 @@
-import type { ClimateRegion } from '../domain/region.js';
+import type { ClimateRegion } from '../domain/region';
 
 export interface SeasonConfig {
   region: ClimateRegion;

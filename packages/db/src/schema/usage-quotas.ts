@@ -1,5 +1,5 @@
 import { pgTable, uuid, text, integer, timestamp, primaryKey } from 'drizzle-orm/pg-core';
-import { profiles } from './profiles.js';
+import { profiles } from './profiles';
 
 export const usageQuotas = pgTable(
   'usage_quotas',

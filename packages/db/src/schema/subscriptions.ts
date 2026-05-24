@@ -8,7 +8,7 @@ import {
   uniqueIndex,
   index,
 } from 'drizzle-orm/pg-core';
-import { profiles } from './profiles.js';
+import { profiles } from './profiles';
 
 export const subscriptions = pgTable(
   'subscriptions',

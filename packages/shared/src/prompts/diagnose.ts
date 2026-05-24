@@ -1,5 +1,5 @@
-import type { ClimateRegion } from '../domain/region.js';
-import type { Locale } from '../domain/region.js';
+import type { ClimateRegion } from '../domain/region';
+import type { Locale } from '../domain/region';
 
 export const DIAGNOSE_PROMPT_VERSION = '2026-05-23.v1';
 

@@ -7,7 +7,7 @@ import {
   jsonb,
   index,
 } from 'drizzle-orm/pg-core';
-import { diagnosticSessions } from './diagnostic-sessions.js';
+import { diagnosticSessions } from './diagnostic-sessions';
 
 export const identifications = pgTable(
   'identifications',

@@ -1,6 +1,6 @@
 import { pgTable, uuid, text, timestamp, jsonb } from 'drizzle-orm/pg-core';
 import { sql } from 'drizzle-orm';
-import { authUsers } from './_shared.js';
+import { authUsers } from './_shared';
 
 export const profiles = pgTable('profiles', {
   id: uuid('id')

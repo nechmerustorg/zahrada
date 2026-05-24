@@ -8,9 +8,9 @@ import {
   jsonb,
   index,
 } from 'drizzle-orm/pg-core';
-import { profiles } from './profiles.js';
-import { userPlants } from './user-plants.js';
-import { plantCareRules } from './plant-care-rules.js';
+import { profiles } from './profiles';
+import { userPlants } from './user-plants';
+import { plantCareRules } from './plant-care-rules';
 
 export const careTasks = pgTable(
   'care_tasks',

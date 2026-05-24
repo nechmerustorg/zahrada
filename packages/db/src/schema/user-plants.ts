@@ -7,8 +7,8 @@ import {
   timestamp,
   index,
 } from 'drizzle-orm/pg-core';
-import { profiles } from './profiles.js';
-import { plantsCatalog } from './plants-catalog.js';
+import { profiles } from './profiles';
+import { plantsCatalog } from './plants-catalog';
 
 export const userPlants = pgTable(
   'user_plants',

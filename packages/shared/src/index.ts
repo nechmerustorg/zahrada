@@ -1,3 +1,3 @@
-export * from './domain/index.js';
-export * from './validators/index.js';
-export * from './seasons/index.js';
+export * from './domain/index';
+export * from './validators/index';
+export * from './seasons/index';

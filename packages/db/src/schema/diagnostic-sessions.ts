@@ -7,8 +7,8 @@ import {
   jsonb,
   index,
 } from 'drizzle-orm/pg-core';
-import { profiles } from './profiles.js';
-import { userPlants } from './user-plants.js';
+import { profiles } from './profiles';
+import { userPlants } from './user-plants';
 
 export const diagnosticSessions = pgTable(
   'diagnostic_sessions',

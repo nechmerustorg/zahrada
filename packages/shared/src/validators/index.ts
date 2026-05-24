@@ -1,6 +1,6 @@
 import { z } from 'zod';
-import { SUPPORTED_LOCALES, COUNTRIES, CLIMATE_REGIONS } from '../domain/region.js';
-import { LOCATION_TYPES } from '../domain/plant.js';
+import { SUPPORTED_LOCALES, COUNTRIES, CLIMATE_REGIONS } from '../domain/region';
+import { LOCATION_TYPES } from '../domain/plant';
 
 export const localeSchema = z.enum(SUPPORTED_LOCALES);
 export const countrySchema = z.enum(COUNTRIES);

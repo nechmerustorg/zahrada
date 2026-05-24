@@ -8,7 +8,7 @@ import {
   timestamp,
   index,
 } from 'drizzle-orm/pg-core';
-import { plantsCatalog } from './plants-catalog.js';
+import { plantsCatalog } from './plants-catalog';
 
 export const plantCareRules = pgTable(
   'plant_care_rules',
