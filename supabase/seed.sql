@@ -1,0 +1,3 @@
+-- Seed for local development.
+-- Plant catalog seed will be added in W3.
+-- Keep this idempotent and small for fast local resets.

@@ -1,0 +1,11 @@
+{
+  "extends": "@pestuj/config/tsconfig.library.json",
+  "compilerOptions": {
+    "resolveJsonModule": true,
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "noEmit": true,
+    "composite": false
+  },
+  "include": ["src/**/*"]
+}

@@ -1,0 +1,109 @@
+{
+  "app": {
+    "name": "Pestuj",
+    "tagline": "Your pocket gardener for Central Europe"
+  },
+  "nav": {
+    "home": "Home",
+    "catalog": "Plant catalog",
+    "garden": "My garden",
+    "diagnosis": "Diagnosis",
+    "subscription": "Subscription",
+    "signIn": "Sign in",
+    "signOut": "Sign out",
+    "signUp": "Sign up"
+  },
+  "landing": {
+    "heroTitle": "Snap a plant, get expert advice.",
+    "heroSubtitle": "A pocket gardener tailored to Central European climate.",
+    "ctaPrimary": "Start growing",
+    "ctaSecondary": "Browse catalog"
+  },
+  "auth": {
+    "signInTitle": "Welcome back",
+    "signUpTitle": "Create your account",
+    "signInSubtitle": "Continue tending your garden",
+    "signUpSubtitle": "Get started in seconds",
+    "email": "Email",
+    "emailPlaceholder": "you@example.com",
+    "password": "Password",
+    "continueWithGoogle": "Continue with Google",
+    "continueWithApple": "Continue with Apple",
+    "sendMagicLink": "Send sign-in link",
+    "magicLinkSent": "Check your email for the link. Open it and you'll be signed in.",
+    "magicLinkError": "Couldn't send the link. Please try again.",
+    "googleError": "Google sign-in failed.",
+    "or": "or",
+    "noAccount": "Don't have an account yet?",
+    "haveAccount": "Already have an account?",
+    "signOut": "Sign out",
+    "invalidEmail": "Enter a valid email",
+    "callbackError": "Sign-in failed. Please try again.",
+    "termsNote": "By continuing you agree to the terms of service and privacy policy."
+  },
+  "onboarding": {
+    "step1Title": "What language do you speak?",
+    "step1Subtitle": "You can change this anytime in settings.",
+    "step2Title": "Where do you grow?",
+    "step2Subtitle": "Helps us with local tips and weather data.",
+    "step3Title": "Choose your climate region",
+    "step3Subtitle": "Drives task timing (frost, planting, harvest).",
+    "useMyLocation": "Use my location",
+    "locationDetecting": "Detecting location…",
+    "locationError": "Couldn't detect your location. Please choose manually.",
+    "selectManually": "Choose manually",
+    "continue": "Continue",
+    "back": "Back",
+    "finish": "Done, let's grow",
+    "stepIndicator": "Step {current} of {total}",
+    "languageCs": "Čeština",
+    "languageSk": "Slovenčina",
+    "languageEn": "English",
+    "countryCz": "Czech Republic",
+    "countrySk": "Slovakia",
+    "countryAt": "Austria",
+    "countryDe": "Germany",
+    "countryPl": "Poland",
+    "countryHu": "Hungary"
+  },
+  "pricing": {
+    "title": "Choose your plan",
+    "subtitle": "No ads, no tracking. Just results.",
+    "monthly": "Monthly",
+    "yearly": "Yearly",
+    "family": "Family plan",
+    "perMonth": "/month",
+    "perYear": "/year",
+    "save": "Save {amount} CZK",
+    "selectPlan": "Choose",
+    "currentPlan": "Current plan",
+    "moneyBack": "14-day money-back guarantee",
+    "familyFeature": "Up to 3 accounts",
+    "diagnosesPerMonth": "{count} diagnoses per month",
+    "unlimitedPlants": "Unlimited plants",
+    "pushNotifications": "Push notifications"
+  },
+  "garden": {
+    "title": "My garden",
+    "empty": "Nothing growing yet",
+    "addPlant": "Add plant",
+    "tasksToday": "Today's tasks",
+    "noTasks": "No tasks for today"
+  },
+  "diagnosis": {
+    "title": "Plant diagnosis",
+    "uploadCta": "Upload a photo",
+    "analyzing": "Analysing…",
+    "quotaExceeded": "You've used up this month's diagnosis quota",
+    "urgencyLow": "No rush",
+    "urgencyMedium": "Keep an eye on it",
+    "urgencyHigh": "Needs attention",
+    "urgencyCritical": "Immediate action"
+  },
+  "errors": {
+    "generic": "Something went wrong. Please try again.",
+    "network": "Connection problem",
+    "unauthorized": "Please sign in to do that",
+    "paymentRequired": "This feature requires an active subscription"
+  }
+}

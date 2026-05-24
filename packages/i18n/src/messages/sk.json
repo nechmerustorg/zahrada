@@ -1,0 +1,109 @@
+{
+  "app": {
+    "name": "Pestuj",
+    "tagline": "Tvoj vreckový záhradník pre strednú Európu"
+  },
+  "nav": {
+    "home": "Domov",
+    "catalog": "Katalóg rastlín",
+    "garden": "Moja záhrada",
+    "diagnosis": "Diagnostika",
+    "subscription": "Predplatné",
+    "signIn": "Prihlásiť sa",
+    "signOut": "Odhlásiť",
+    "signUp": "Registrácia"
+  },
+  "landing": {
+    "heroTitle": "Odfoť rastlinu, dostaneš radu.",
+    "heroSubtitle": "Personálny záhradník vo vrecku — pre Slovensko, Česko aj celú strednú Európu.",
+    "ctaPrimary": "Začať pestovať",
+    "ctaSecondary": "Pozrieť katalóg"
+  },
+  "auth": {
+    "signInTitle": "Vitaj späť",
+    "signUpTitle": "Vytvor si účet",
+    "signInSubtitle": "Pokračuj v starostlivosti o svoju záhradu",
+    "signUpSubtitle": "Začni za pár sekúnd",
+    "email": "E-mail",
+    "emailPlaceholder": "tvoj@email.sk",
+    "password": "Heslo",
+    "continueWithGoogle": "Pokračovať s Googlom",
+    "continueWithApple": "Pokračovať s Apple",
+    "sendMagicLink": "Poslať prihlasovací odkaz",
+    "magicLinkSent": "Odkaz sme poslali na e-mail. Otvor ho a budeš prihlásený.",
+    "magicLinkError": "Nepodarilo sa odoslať odkaz. Skús to prosím znova.",
+    "googleError": "Prihlásenie cez Google sa nepodarilo.",
+    "or": "alebo",
+    "noAccount": "Ešte nemáš účet?",
+    "haveAccount": "Už máš účet?",
+    "signOut": "Odhlásiť sa",
+    "invalidEmail": "Zadaj platný e-mail",
+    "callbackError": "Prihlásenie zlyhalo. Skús to prosím znova.",
+    "termsNote": "Pokračovaním súhlasíš s podmienkami použitia a spracovaním osobných údajov."
+  },
+  "onboarding": {
+    "step1Title": "Akým jazykom hovoríš?",
+    "step1Subtitle": "Môžeš to neskôr kedykoľvek zmeniť v nastaveniach.",
+    "step2Title": "Kde pestuješ?",
+    "step2Subtitle": "Pomôže nám to s lokálnymi tipmi a dátami o počasí.",
+    "step3Title": "Vyber svoj klimatický región",
+    "step3Subtitle": "Toto ovplyvňuje načasovanie úloh (mráz, výsadba, zber).",
+    "useMyLocation": "Použiť moju polohu",
+    "locationDetecting": "Hľadám polohu…",
+    "locationError": "Nepodarilo sa získať polohu. Vyber prosím ručne.",
+    "selectManually": "Vybrať ručne",
+    "continue": "Pokračovať",
+    "back": "Späť",
+    "finish": "Hotovo, idem pestovať",
+    "stepIndicator": "Krok {current} z {total}",
+    "languageCs": "Čeština",
+    "languageSk": "Slovenčina",
+    "languageEn": "English",
+    "countryCz": "Česko",
+    "countrySk": "Slovensko",
+    "countryAt": "Rakúsko",
+    "countryDe": "Nemecko",
+    "countryPl": "Poľsko",
+    "countryHu": "Maďarsko"
+  },
+  "pricing": {
+    "title": "Vyber si predplatné",
+    "subtitle": "Bez reklám, bez sledovania. Iba výsledky.",
+    "monthly": "Mesačne",
+    "yearly": "Ročne",
+    "family": "Rodinný plán",
+    "perMonth": "/mesiac",
+    "perYear": "/rok",
+    "save": "Ušetríš {amount} Kč",
+    "selectPlan": "Vybrať",
+    "currentPlan": "Aktuálny plán",
+    "moneyBack": "14-dňová záruka vrátenia peňazí",
+    "familyFeature": "Až 3 účty",
+    "diagnosesPerMonth": "{count} diagnóz mesačne",
+    "unlimitedPlants": "Neobmedzene rastlín",
+    "pushNotifications": "Push notifikácie"
+  },
+  "garden": {
+    "title": "Moja záhrada",
+    "empty": "Zatiaľ tu nič nerastie",
+    "addPlant": "Pridať rastlinu",
+    "tasksToday": "Dnešné úlohy",
+    "noTasks": "Žiadne úlohy na dnes"
+  },
+  "diagnosis": {
+    "title": "Diagnostika rastliny",
+    "uploadCta": "Nahrať fotku",
+    "analyzing": "Analyzujem…",
+    "quotaExceeded": "Vyčerpal si mesačný limit diagnóz",
+    "urgencyLow": "Žiadny zhon",
+    "urgencyMedium": "Sleduj situáciu",
+    "urgencyHigh": "Vyžaduje pozornosť",
+    "urgencyCritical": "Okamžitý zásah"
+  },
+  "errors": {
+    "generic": "Niečo sa pokazilo. Skús to prosím znova.",
+    "network": "Problém s pripojením",
+    "unauthorized": "Pre túto akciu sa musíš prihlásiť",
+    "paymentRequired": "Pre túto funkciu potrebuješ aktívne predplatné"
+  }
+}
