@@ -4,6 +4,7 @@ import { redirect } from 'next/navigation';
 import { revalidatePath } from 'next/cache';
 import { userPlantInputSchema, type Locale, type UserPlantInput } from '@pestuj/shared';
 import { createSupabaseServerClient } from '@/lib/supabase/server';
+import { generateTasksForUserPlant } from '@/lib/garden/task-engine';
 import { pickCommonName, type CatalogLite } from './queries';
 
 /**
@@ -136,6 +137,14 @@ export async function addUserPlant(input: UserPlantInput): Promise<AddUserPlantR
   if (error || !inserted) {
     console.error('addUserPlant error', error);
     return { ok: false, error: 'insert_failed' };
+  }
+
+  // Best-effort: seed initial care tasks for the new plant. Failures are
+  // non-fatal (the daily cron picks them up later).
+  try {
+    await generateTasksForUserPlant(supabase, userResp.user.id, inserted.id);
+  } catch (err) {
+    console.error('initial task generation failed', err);
   }
 
   revalidatePath('/moje-zahrada');

@@ -183,6 +183,16 @@
     },
     "hardinessValue": "{value} °C"
   },
+  "tasks": {
+    "sectionTitle": "Your tasks",
+    "empty": "Nothing on the to-do list for the next two weeks. Enjoy.",
+    "todayTitle": "Today",
+    "upcomingTitle": "This week",
+    "overdueTitle": "Overdue ({count})",
+    "complete": "Done",
+    "snoozeOneDay": "+1 day",
+    "regenerate": "Refresh tasks"
+  },
   "errors": {
     "generic": "Something went wrong. Please try again.",
     "network": "Connection problem",

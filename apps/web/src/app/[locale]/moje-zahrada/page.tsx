@@ -5,6 +5,9 @@ import { Link } from '@/i18n/navigation';
 import { getUserSession, isOnboardingComplete } from '@/lib/auth/session';
 import { listUserPlants, pickCommonName } from '@/lib/garden/queries';
 import { formatPlantedSince } from '@/lib/garden/format';
+import { TaskList } from '@/components/garden/task-list';
+import { createSupabaseServerClient } from '@/lib/supabase/server';
+import { generateTasksForAllUserPlants } from '@/lib/garden/task-engine';
 
 export default async function GardenPage() {
   const session = await getUserSession();
@@ -12,12 +15,26 @@ export default async function GardenPage() {
   if (!isOnboardingComplete(session.profile)) redirect('/onboarding');
 
   const t = await getTranslations('garden');
+  const tTasks = await getTranslations('tasks');
   const locale = session.profile.locale;
   const regionLabel =
     session.profile.climateZone &&
     CLIMATE_REGION_LABELS[session.profile.climateZone][locale];
 
   const plants = await listUserPlants(session.userId);
+
+  // Best-effort: lazily seed tasks for users whose plants pre-date the engine.
+  if (plants.length > 0) {
+    const supabase = await createSupabaseServerClient();
+    const { count } = await supabase
+      .from('care_tasks')
+      .select('id', { count: 'exact', head: true })
+      .eq('user_id', session.userId)
+      .in('status', ['pending', 'overdue']);
+    if (!count) {
+      await generateTasksForAllUserPlants(supabase, session.userId).catch(() => {});
+    }
+  }
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-leaf-50 to-white">
@@ -57,6 +74,13 @@ export default async function GardenPage() {
             </Link>
           )}
         </div>
+
+        {plants.length > 0 && (
+          <div className="mt-10">
+            <h2 className="mb-4 text-xl font-semibold text-leaf-900">{tTasks('sectionTitle')}</h2>
+            <TaskList userId={session.userId} locale={locale} />
+          </div>
+        )}
 
         {plants.length === 0 ? (
           <div className="mt-10 rounded-3xl border-2 border-dashed border-leaf-200 bg-white px-8 py-16 text-center">
