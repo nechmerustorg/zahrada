@@ -51,6 +51,7 @@
     "useMyLocation": "Použiť moju polohu",
     "locationDetecting": "Hľadám polohu…",
     "locationError": "Nepodarilo sa získať polohu. Vyber prosím ručne.",
+    "detectedFromGps": "Región sme určili z tvojej polohy. Ak nesedí, vyber iný.",
     "selectManually": "Vybrať ručne",
     "continue": "Pokračovať",
     "back": "Späť",

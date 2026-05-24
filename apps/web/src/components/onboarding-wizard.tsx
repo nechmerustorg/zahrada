@@ -45,6 +45,7 @@ export function OnboardingWizard({
   const [country, setCountry] = useState<Country | null>(null);
   const [climate, setClimate] = useState<ClimateRegion | null>(null);
   const [geoState, setGeoState] = useState<'idle' | 'detecting' | 'error'>('idle');
+  const [climateFromGps, setClimateFromGps] = useState(false);
   const [, startTransition] = useTransition();
   const [submitting, setSubmitting] = useState(false);
 
@@ -62,7 +63,11 @@ export function OnboardingWizard({
             longitude: pos.coords.longitude,
           });
           if (guess.country) setCountry(guess.country);
-          if (guess.climate_zone) setClimate(guess.climate_zone);
+          if (guess.climate_zone) {
+            setClimate(guess.climate_zone);
+            setClimateFromGps(true);
+            setStep(3);
+          }
           setGeoState('idle');
         } catch {
           setGeoState('error');
@@ -194,12 +199,22 @@ export function OnboardingWizard({
           <h1 className="text-3xl font-bold text-leaf-900">{t('step3Title')}</h1>
           <p className="mt-2 text-sm text-leaf-700">{t('step3Subtitle')}</p>
 
+          {climateFromGps && (
+            <p className="mt-4 flex items-center gap-2 rounded-2xl bg-leaf-100 px-4 py-3 text-sm text-leaf-800">
+              <PinIcon />
+              {t('detectedFromGps')}
+            </p>
+          )}
+
           <div className="mt-6 space-y-2">
             {availableRegions(country).map((region) => (
               <button
                 key={region}
                 type="button"
-                onClick={() => setClimate(region)}
+                onClick={() => {
+                  setClimate(region);
+                  setClimateFromGps(false);
+                }}
                 className={`block w-full rounded-2xl border-2 px-5 py-4 text-left text-sm font-medium transition ${
                   climate === region
                     ? 'border-leaf-600 bg-leaf-50 text-leaf-900'
