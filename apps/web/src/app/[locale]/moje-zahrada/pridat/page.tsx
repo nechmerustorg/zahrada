@@ -4,6 +4,7 @@ import { Link } from '@/i18n/navigation';
 import { getUserSession, isOnboardingComplete } from '@/lib/auth/session';
 import { getCatalogBySlug } from '@/lib/garden/queries';
 import { AddPlantForm } from '@/components/garden/add-plant-form';
+import { SiteHeader } from '@/components/site-header';
 
 interface PageProps {
   searchParams: Promise<{ catalog?: string }>;
@@ -21,17 +22,15 @@ export default async function AddPlantPage({ searchParams }: PageProps) {
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-leaf-50 to-white">
-      <header className="mx-auto flex max-w-3xl items-center justify-between px-6 py-6">
-        <div className="text-xl font-semibold text-leaf-800">Pestuj</div>
-        <Link
-          href="/moje-zahrada"
-          className="text-sm text-leaf-800 hover:text-leaf-600"
-        >
+      <SiteHeader variant="app" />
+
+      <section className="mx-auto max-w-3xl px-6 py-6">
+        <Link href="/moje-zahrada" className="text-sm font-medium text-leaf-700 hover:text-leaf-900">
           {t('backToGarden')}
         </Link>
-      </header>
+      </section>
 
-      <section className="mx-auto max-w-3xl px-6 py-10">
+      <section className="mx-auto max-w-3xl px-6 pb-10">
         <h1 className="text-3xl font-bold text-leaf-900">{t('addPlantTitle')}</h1>
         <div className="mt-8 rounded-3xl border border-leaf-200 bg-white p-6 shadow-sm sm:p-8">
           <AddPlantForm

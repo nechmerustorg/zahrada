@@ -2,6 +2,7 @@ import { getTranslations } from 'next-intl/server';
 import { PLANT_CATEGORIES, type PlantCategory, type Locale } from '@pestuj/shared';
 import { Link } from '@/i18n/navigation';
 import { listCatalogPlants, pickCommonName } from '@/lib/catalog/queries';
+import { SiteHeader } from '@/components/site-header';
 
 const CATEGORY_FILTERS: Array<{ value: PlantCategory; key: string }> = [
   { value: 'vegetable', key: 'filterVegetables' },
@@ -33,7 +34,6 @@ export default async function CatalogPage({
   const { locale } = await params;
   const sp = await searchParams;
   const t = await getTranslations('catalog');
-  const tApp = await getTranslations('app');
 
   const category =
     sp.category && (PLANT_CATEGORIES as readonly string[]).includes(sp.category)
@@ -45,17 +45,7 @@ export default async function CatalogPage({
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-leaf-50 to-white">
-      <header className="mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
-        <Link href="/" className="text-xl font-semibold text-leaf-800">
-          {tApp('name')}
-        </Link>
-        <Link
-          href="/sign-in"
-          className="rounded-full bg-leaf-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-leaf-700"
-        >
-          Přihlásit se
-        </Link>
-      </header>
+      <SiteHeader variant="public" />
 
       <section className="mx-auto max-w-6xl px-6 py-8">
         <h1 className="text-4xl font-bold text-leaf-900 sm:text-5xl">{t('title')}</h1>

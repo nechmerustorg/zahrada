@@ -1,6 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 import { TIER_PRICES_CZK, TIER_DIAGNOSIS_QUOTA_PER_MONTH } from '@pestuj/shared';
 import { Link } from '@/i18n/navigation';
+import { SiteHeader } from '@/components/site-header';
 
 export default async function PricingPage() {
   const t = await getTranslations('pricing');
@@ -33,11 +34,7 @@ export default async function PricingPage() {
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-leaf-50 to-white">
-      <header className="mx-auto flex max-w-5xl items-center justify-between px-6 py-6">
-        <Link href="/" className="text-xl font-semibold text-leaf-800">
-          Pestuj
-        </Link>
-      </header>
+      <SiteHeader variant="public" />
 
       <section className="mx-auto max-w-5xl px-6 py-12">
         <h1 className="text-balance text-center text-4xl font-bold text-leaf-900 sm:text-5xl">

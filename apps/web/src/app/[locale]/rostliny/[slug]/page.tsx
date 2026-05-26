@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import type { Locale } from '@pestuj/shared';
 import { Link } from '@/i18n/navigation';
+import { SiteHeader } from '@/components/site-header';
 import {
   getCatalogPlantBySlug,
   getCompanionDetails,
@@ -56,16 +57,15 @@ export default async function CatalogDetailPage({
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-leaf-50 to-white">
-      <header className="mx-auto flex max-w-4xl items-center justify-between px-6 py-6">
-        <Link href="/" className="text-xl font-semibold text-leaf-800">
-          Pestuj
-        </Link>
+      <SiteHeader variant="public" />
+
+      <section className="mx-auto max-w-4xl px-6 py-4">
         <Link href="/rostliny" className="text-sm font-medium text-leaf-700 hover:text-leaf-900">
           {t('backToCatalog')}
         </Link>
-      </header>
+      </section>
 
-      <article className="mx-auto max-w-4xl px-6 py-8">
+      <article className="mx-auto max-w-4xl px-6 pb-8">
         <h1 className="text-balance text-5xl font-bold capitalize text-leaf-900">{name}</h1>
         <p className="mt-2 text-lg italic text-leaf-600">{plant.scientific_name}</p>
 

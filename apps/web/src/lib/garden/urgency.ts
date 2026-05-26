@@ -92,38 +92,8 @@ export function urgencyLabel(u: Urgency, locale: Locale): string {
   return map[u][locale];
 }
 
-/** Emoji / sprite for a catalog plant slug. Falls back to the category emoji. */
-export function plantSprite(slug: string | null | undefined, category: string | undefined): string {
-  if (slug) {
-    const bySlug: Record<string, string> = {
-      rajce: '🍅',
-      paprika: '🫑',
-      okurka: '🥒',
-      mrkev: '🥕',
-      brambory: '🥔',
-      cibule: '🧅',
-      cesnek: '🧄',
-      salat: '🥬',
-      bazalka: '🌿',
-      petrzel: '🌿',
-      mata: '🌿',
-      salvej: '🌱',
-      tymian: '🌱',
-      rozmaryn: '🌲',
-      pazitka: '🌿',
-      jahoda: '🍓',
-      malina: '🫐',
-      jablon: '🍎',
-      hrusen: '🍐',
-      ribiz: '🍇',
-      ruze: '🌹',
-      hortenzie: '🌸',
-      levandule: '💜',
-      monstera: '🪴',
-      'sukulent-echeveria': '🌵',
-    };
-    if (bySlug[slug]) return bySlug[slug];
-  }
+/** Category fallback emoji used when no SVG sprite matches the slug. */
+export function categoryEmoji(category: string | undefined): string {
   const byCategory: Record<string, string> = {
     vegetable: '🥬',
     herb: '🌿',

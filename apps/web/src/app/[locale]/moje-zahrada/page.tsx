@@ -11,6 +11,7 @@ import { TaskList } from '@/components/garden/task-list';
 import { GardenList } from '@/components/garden/garden-list';
 import { GardenMap } from '@/components/garden/garden-map';
 import { GardenViewToggle } from '@/components/garden/view-toggle';
+import { SiteHeader } from '@/components/site-header';
 
 export default async function GardenPage({
   searchParams,
@@ -49,17 +50,7 @@ export default async function GardenPage({
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-leaf-50 to-white">
-      <header className="mx-auto flex max-w-5xl items-center justify-between px-6 py-6">
-        <div className="text-xl font-semibold text-leaf-800">Pestuj</div>
-        <form action="/sign-out" method="post">
-          <button
-            type="submit"
-            className="rounded-full border border-leaf-300 px-4 py-2 text-sm text-leaf-800 hover:bg-leaf-50"
-          >
-            Odhlásit
-          </button>
-        </form>
-      </header>
+      <SiteHeader variant="app" />
 
       <section className="mx-auto max-w-5xl px-6 py-10">
         <div className="flex flex-wrap items-end justify-between gap-4">
