@@ -6,6 +6,7 @@ import { getUserPlant, pickCommonName } from '@/lib/garden/queries';
 import { formatLongDate } from '@/lib/garden/format';
 import { PlantDetailActions } from '@/components/garden/plant-detail-actions';
 import type { PlantFormValues } from '@/components/garden/plant-form';
+import { SiteHeader } from '@/components/site-header';
 import type { LocationType } from '@pestuj/shared';
 
 interface PageProps {
@@ -52,14 +53,15 @@ export default async function PlantDetailPage({ params }: PageProps) {
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-leaf-50 to-white">
-      <header className="mx-auto flex max-w-3xl items-center justify-between px-6 py-6">
-        <div className="text-xl font-semibold text-leaf-800">Pestuj</div>
-        <Link href="/moje-zahrada" className="text-sm text-leaf-800 hover:text-leaf-600">
+      <SiteHeader variant="app" />
+
+      <section className="mx-auto max-w-3xl px-6 py-6">
+        <Link href="/moje-zahrada" className="text-sm font-medium text-leaf-700 hover:text-leaf-900">
           {t('backToGarden')}
         </Link>
-      </header>
+      </section>
 
-      <section className="mx-auto max-w-3xl px-6 py-10">
+      <section className="mx-auto max-w-3xl px-6 pb-10">
         <div className="rounded-3xl border border-leaf-200 bg-white p-6 shadow-sm sm:p-8">
           <div className="flex flex-wrap items-start justify-between gap-4">
             <div>

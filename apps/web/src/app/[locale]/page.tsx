@@ -1,28 +1,13 @@
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
+import { SiteHeader } from '@/components/site-header';
 
 export default async function HomePage() {
   const t = await getTranslations();
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-leaf-50 to-white">
-      <header className="mx-auto flex max-w-5xl items-center justify-between px-6 py-6">
-        <div className="text-xl font-semibold text-leaf-800">{t('app.name')}</div>
-        <nav className="flex items-center gap-4 text-sm text-leaf-800">
-          <Link href="/rostliny" className="hover:text-leaf-600">
-            {t('nav.catalog')}
-          </Link>
-          <Link href="/predplatne" className="hover:text-leaf-600">
-            {t('nav.subscription')}
-          </Link>
-          <Link
-            href="/sign-in"
-            className="rounded-full bg-leaf-600 px-4 py-2 text-white hover:bg-leaf-700"
-          >
-            {t('nav.signIn')}
-          </Link>
-        </nav>
-      </header>
+      <SiteHeader variant="public" />
 
       <section className="mx-auto max-w-5xl px-6 py-20">
         <h1 className="text-balance text-5xl font-bold leading-tight text-leaf-900 sm:text-6xl">

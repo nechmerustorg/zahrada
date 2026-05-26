@@ -4,11 +4,11 @@ import { Link } from '@/i18n/navigation';
 import { pickCommonName, type UserPlantRow } from '@/lib/garden/queries';
 import {
   computeUrgency,
-  plantSprite,
   urgencyColor,
   urgencyLabel,
   type PlantUrgencySummary,
 } from '@/lib/garden/urgency';
+import { PlantSprite } from './plant-sprite';
 import type { TaskListItem } from '@/lib/garden/tasks';
 
 interface Props {
@@ -96,7 +96,6 @@ function PlantTile({
 }) {
   const colors = urgencyColor(summary.urgency);
   const catalog = plant.plants_catalog;
-  const sprite = plantSprite(catalog?.slug, catalog?.category);
   const label =
     plant.nickname || pickCommonName(catalog?.common_names, locale, plant.custom_name);
 
@@ -114,7 +113,7 @@ function PlantTile({
         boxShadow: 'inset 0 0 0 2px rgba(255,255,255,0.4), 0 2px 0 rgba(0,0,0,0.3)',
       }}
     >
-      <span className="select-none text-4xl drop-shadow-[1px_1px_0_rgba(0,0,0,0.4)]">{sprite}</span>
+      <PlantSprite slug={catalog?.slug} category={catalog?.category} size={64} />
       <span
         aria-hidden
         className={`absolute right-1 top-1 h-3 w-3 rounded-full border-2 border-white ${colors.dot}`}

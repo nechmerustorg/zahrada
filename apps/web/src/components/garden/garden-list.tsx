@@ -3,12 +3,8 @@ import type { Locale } from '@pestuj/shared';
 import { Link } from '@/i18n/navigation';
 import { pickCommonName, type UserPlantRow } from '@/lib/garden/queries';
 import { formatPlantedSince } from '@/lib/garden/format';
-import {
-  computeUrgency,
-  plantSprite,
-  urgencyColor,
-  urgencyLabel,
-} from '@/lib/garden/urgency';
+import { computeUrgency, urgencyColor, urgencyLabel } from '@/lib/garden/urgency';
+import { PlantSprite } from './plant-sprite';
 import type { TaskListItem } from '@/lib/garden/tasks';
 
 interface Props {
@@ -34,7 +30,6 @@ export async function GardenList({ plants, tasks, locale }: Props) {
             )
           : null;
         const summary = computeUrgency(plant.id, tasks);
-        const sprite = plantSprite(plant.plants_catalog?.slug, plant.plants_catalog?.category);
         const c = urgencyColor(summary.urgency);
         return (
           <li key={plant.id}>
@@ -45,9 +40,13 @@ export async function GardenList({ plants, tasks, locale }: Props) {
               <div className="flex items-start gap-3">
                 <span
                   aria-hidden
-                  className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border-2 ${c.border} ${c.bg} text-2xl`}
+                  className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border-2 ${c.border} ${c.bg}`}
                 >
-                  {sprite}
+                  <PlantSprite
+                    slug={plant.plants_catalog?.slug}
+                    category={plant.plants_catalog?.category}
+                    size={36}
+                  />
                 </span>
                 <div className="min-w-0 flex-1">
                   <div className="flex items-start justify-between gap-2">
